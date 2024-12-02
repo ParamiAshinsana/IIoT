@@ -1,0 +1,79 @@
+[
+    {
+        "id": "9bdd09e671cc4c2d",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cacee0b6f26835d3",
+        "type": "debug",
+        "z": "9bdd09e671cc4c2d",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "875db02aa8f86821",
+        "type": "mqtt in",
+        "z": "9bdd09e671cc4c2d",
+        "name": "",
+        "topic": "device/birthMessage",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "36566b70538e4072",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 160,
+        "wires": [
+            [
+                "cacee0b6f26835d3"
+            ]
+        ]
+    },
+    {
+        "id": "36566b70538e4072",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "emqx",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
